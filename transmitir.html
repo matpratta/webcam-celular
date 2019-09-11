@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+  .div-16x9 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+  }
+
+  .div-16x9 video {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 0.5em 1em;
+
+    font-size: 2em;
+    border-radius: 0.5em;
+
+    text-transform: uppercase;
+
+    border: 2px solid;
+    background: #fff;
+
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div id="div-16x9">
+    <video id="feedback" autoplay></video>
+  </div>
+  
+  <button id="iniciar">Iniciar</button>
+  
+  <script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+  <script src="codigo.js"></script>
+  <script src="transmitir.js"></script>
+</body>
+</html>
